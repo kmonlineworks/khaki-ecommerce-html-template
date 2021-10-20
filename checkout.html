@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 	<head>
+ 		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Kamran Mubarik">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title -->
+ 		<title>E-Commerce Online Shop</title>
+ 		<!-- Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- Javascript -->	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+  		<script>
+  			$(document).ready(function(){
+  				
+  				$('input[type="radio"]').change(function(){
+  					
+  					if (this.value == 'easypaisa') {
+  						
+  						$('#easypaisaText').css('display', 'block');
+  					} 
+  					else {
+  						$('#easypaisaText').css('display', 'none');
+  					}
+  					
+  				});
+  			});
+  		</script>
+ 	</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="brand">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/icons/online_shopping.png">
+						<div class="logo-text">
+							<p class="big-logo">Ecommerce</p>
+							<p class="small-logo">online shop</p>
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="account.html">My Account</a></li>
+								<li><a href="orders.html">My Orders</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/heart.png">
+						<div class="dropdown-menu wishlist-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>product name</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>product name</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/shopping_cart.png">
+						<div class="dropdown-menu cart-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Image</th>
+										<th>Product Name</th>
+										<th class="center">Price</th>
+										<th class="center">Qty.</th>
+										<th class="center">Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>product name</td>
+										<td class="center">1200</td>
+										<td class="center">2</td>
+										<td class="center">2400</td>
+									</tr>
+									<tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>product name</td>
+										<td class="center">1500</td>
+										<td class="center">2</td>
+										<td class="center">3000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div> <!-- shop icons -->
+			</div> <!-- brand -->
+
+			<div class="menu-bar">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="shop.html">Shop</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="search-bar">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="search" placeholder="Search">
+							<img src="img/icons/search.png">
+						</div>
+					</form>
+				</div>
+			</div> <!-- menu -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<div class="container">
+		<main>
+			<div class="breadcrumb">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li> / </li>
+					<li><a href="shop.html">Shop</a></li>
+					<li> / </li>
+					<li><a href="cart.html">Cart</a></li>
+					<li> / </li>
+					<li>Checkout</li>
+				</ul>
+			</div> <!-- End of Breadcrumb-->
+
+			<h2>Billing Detail</h2>
+			<div class="checkout-page">
+				<div class="billing-detail">					
+					<form class="checkout-form">
+						<h4>Shipping Detail</h4>
+						<div class="form-inline">
+							<div class="form-group">
+								<label>First Name</label>
+								<input type="text" id="fname" name="fname">
+							</div>
+							<div class="form-group">
+								<label>Last Name</label>
+								<input type="text" id="lname" name="lname">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Company Name (Optional)</label>
+							<input type="text" id="cname" name="cname">
+						</div>
+						<div class="form-inline">
+							<div class="form-group">
+								<label>Country</label>
+								<select id="country" name="country">
+									<option>---Select a Country---</option>
+									<option>Pakistan</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label>City</label>
+								<select id="cityy" name="cityy">
+									<option>---Select a City---</option>
+									<option>Karachi</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Address</label>
+							<textarea style="resize:none" id="address" name="address" rows="3"></textarea>
+						</div>
+						<h4>Login Detail</h4>
+						<div class="form-inline">					
+							<div class="form-group">
+								<label>Email</label>
+								<input type="email" id="email" name="email" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Password</label>
+								<input type="password" id="password" name="password" autocomplete="off">
+							</div>
+						</div>
+						<h4>Contact Detail</h4>
+						<div class="form-inline">					
+							<div class="form-group">
+								<label>Tel</label>
+								<input type="text" id="tel" name="tel" minlength="11" maxlength="11">
+							</div>
+							<div class="form-group">
+								<label>Mobile</label>
+								<input type="text" id="mobile" name="mobile" minlength="11" maxlength="11">
+							</div>
+						</div>
+						<h4>Additional Information (Optional)</h4>
+						<div class="form-group">
+							<label>Order Note</label>
+							<textarea style="resize:none" id="address" name="address" rows="3"></textarea>
+						</div>					
+				</div>
+				<div class="order-summary">
+					<div class="checkout-total">
+						<h3>Order Summary</h3>
+						<ul>
+							<li>Cart Amount: <span>1200</span></li>
+							<li>Delivery Charges: <span>100</span></li>
+							<li>Less: Discount @ 10%: <span>-13</span></li>
+							<hr>
+							<li>Total Amount: <span>1287</span></li>
+							<hr>
+							<li><input type="radio" name="payment"> Cash on Delivery</li>
+							<li><input type="radio" id="easypaisa" name="payment" value="easypaisa"> Easypaisa Account</li>
+							<li>
+								<textarea id="easypaisaText" rows="5" disabled="disable">Please deposit the payment in our easypaisa account# 030X-XXXXXXX after confirm payment kindly send us payment slip and order transaction id on above number.</textarea>
+							</li>
+							<li><input type="radio" name="payment"> Bank Transferred</li>
+							<hr>
+							<li><input type="submit" name="order" value="Place Order"></li>
+						</ul>
+					</div>
+					</form> <!-- End of Checkout Form -->
+				</div>
+			</div>		
+		</main> <!-- Main Area -->
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="footer-widget">
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Important Link</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="refund.html">Refund Policy</a></li>
+							<li><a href="terms.html">Terms & Conditions</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Information</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="account.html">My Account</a></li>
+							<li><a href="orders.html">My Orders</a></li>
+							<li><a href="cart.html">Cart</a></li>
+							<li><a href="checkout.html">Checkout</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Follow us</h3>
+					</div>
+					<div class="widget-content">
+						<div class="follow">
+							<ul>
+								<li><a href="#"><img src="img/icons/facebook.png"></a></li>
+								<li><a href="#"><img src="img/icons/twitter.png"></a></li>
+								<li><a href="#"><img src="img/icons/instagram.png"></a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="widget-heading">
+						<h3>Subscribe for Newsletter</h3>
+					</div>
+					<div class="widget-content">
+						<div class="subscribe">
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" name="subscribe" placeholder="Email">
+									<img src="img/icons/paper_plane.png">
+								</div>
+							</form>
+						</div>						
+					</div>
+				</div>
+			</div> <!-- Footer Widget -->
+			<div class="footer-bar">
+				<div class="copyright-text">
+					<p>Copyright 2021 - All Rights Reserved</p>
+				</div>
+				<div class="payment-mode">
+					<img src="img/icons/paper_money.png">
+					<img src="img/icons/visa.png">
+					<img src="img/icons/mastercard.png">
+				</div>
+			</div> <!-- Footer Bar -->
+		</div>
+	</footer> <!-- Footer Area -->
+
+</body>
+
+</html>
